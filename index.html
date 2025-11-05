@@ -1,28 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMMFO</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <title>IMMFO — Data as Property</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Link your CSS later:
+  <link rel="stylesheet" href="styles.css">
+  -->
 </head>
 <body>
-    <header> 
-        <div class="container">
-            <div class="logo">
-                <h1>IMMFO</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- ===== Header ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="IMMFO Home">IMMFO</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#explore">Explore</a></li>
+          <li><a href="#info">Info</a></li>
+          <li><a href="#about">About This Campaign</a></li>
+        </ul>
+      </nav>
+      <nav class="site-utility" aria-label="Utility">
+        <ul class="nav-list">
+          <li><a href="#solution">Solution</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#campaign">This campaign</a></li>
+          <li><a href="#account">Create account</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Your data,<br>Our property.</h1>
+          <p>
+            We scraped every trace of people on the internet, profiles, purchases,
+            messages, movements. Bundled and on the shelf. Buy anyone’s data. Know
+            everything. Use it.
+          </p>
+          <p class="hero-actions">
+            <a class="btn btn-primary" href="#explore" id="cta-explore">Explore Now</a>
+          </p>
         </div>
-    </header>
-        
-    <script src="js/main.js" defer ></script>
+        <div class="hero-media" aria-hidden="true">
+          <!-- Add hero image later -->
+          <!-- <img src="assets/hero.jpg" alt=""> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Toolbar (Filters / Search) ===== -->
+    <section class="toolbar" aria-label="Filters and search">
+      <div class="container toolbar-inner">
+        <form class="filters" action="#" method="get">
+          <div class="filters-row">
+            <label class="filter-label" for="filter-type">Filter by:</label>
+            <button type="button" class="filter-chip" id="filter-type">Data Type</button>
+            <button type="button" class="filter-chip" aria-pressed="true">Recent</button>
+            <button type="button" class="filter-chip">More Filters</button>
+            <div class="spacer"></div>
+            <label for="search" class="visually-hidden">Search by name</label>
+            <input id="search" name="q" type="search" placeholder="Search by name" autocomplete="off" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Cards Grid ===== -->
+    <section id="explore" class="cards" aria-labelledby="cards-title">
+      <div class="container">
+        <h2 id="cards-title" class="section-title">Explore</h2>
+
+        <div class="grid">
+
+          <!-- Card 1 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€500.00</p>
+              <h3 class="name">Erwin Listhaeghe</h3>
+              <p class="meta">Brasschaat, Belgium</p>
+            </header>
+            <p class="desc">Married with 2 kids</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">438 GB</span></li>
+              <li><span class="metric">146 GB</span></li>
+              <li><span class="metric">584 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€460.00</p>
+              <h3 class="name">Bavo Van Hecke</h3>
+              <p class="meta">Waarloos, Belgium</p>
+            </header>
+            <p class="desc">Likes Heideroosjes</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">333 GB</span></li>
+              <li><span class="metric">150 GB</span></li>
+              <li><span class="metric">200 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€600.00</p>
+              <h3 class="name">Bettina&nbsp;Gjecaj</h3>
+              <p class="meta">Graz, Austria</p>
+            </header>
+            <p class="desc">Lecturer FH JOANNEUM</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">30 GB</span></li>
+              <li><span class="metric">600</span></li>
+              <li><span class="metric">35 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€690.00</p>
+              <h3 class="name">Juan Carlos Gauli</h3>
+              <p class="meta">Madrid, Spain</p>
+            </header>
+            <p class="desc">JCG for friends</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">200 GB</span></li>
+              <li><span class="metric">560 GB</span></li>
+              <li><span class="metric">600 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€305.00</p>
+              <h3 class="name">Jasper Impens</h3>
+              <p class="meta">Ghent, Belgium</p>
+            </header>
+            <p class="desc">CEO of JID</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">203 GB</span></li>
+              <li><span class="metric">150 GB</span></li>
+              <li><span class="metric">200 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€310.00</p>
+              <h3 class="name">Lowie Pijl</h3>
+              <p class="meta">Haasdonk, Belgium</p>
+            </header>
+            <p class="desc">Member of WTC De Vlammers</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">180 GB</span></li>
+              <li><span class="metric">162 GB</span></li>
+              <li><span class="metric">265 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€125.00</p>
+              <h3 class="name">Luka Saint Ghislain</h3>
+              <p class="meta">Unknown</p>
+            </header>
+            <p class="desc">Watched The Princess Bride</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">50 GB</span></li>
+              <li><span class="metric">150 GB</span></li>
+              <li><span class="metric">180 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€400.00</p>
+              <h3 class="name">Levi&nbsp;Van Veen</h3>
+              <p class="meta">Zwolle, The Netherlands</p>
+            </header>
+            <p class="desc">Likes gaming</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">520 GB</span></li>
+              <li><span class="metric">130 GB</span></li>
+              <li><span class="metric">540 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€500.00</p>
+              <h3 class="name">Martina Ruiz González</h3>
+              <p class="meta">Madrid, Spain</p>
+            </header>
+            <p class="desc">Visiting Belgium</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">348 GB</span></li>
+              <li><span class="metric">140 GB</span></li>
+              <li><span class="metric">601 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 10 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€500.00</p>
+              <h3 class="name">Erwin Listhaeghe 2</h3>
+              <p class="meta">Brasschaat, Belgium</p>
+            </header>
+            <p class="desc">Stole Erwin his identitiy</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">438 GB</span></li>
+              <li><span class="metric">146 GB</span></li>
+              <li><span class="metric">584 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 11 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€499.00</p>
+              <h3 class="name">Peter Van Aeltert</h3>
+              <p class="meta">Bruges, Belgium</p>
+            </header>
+            <p class="desc">Is a realy weird guy</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">425 GB</span></li>
+              <li><span class="metric">130 GB</span></li>
+              <li><span class="metric">600 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+          <!-- Card 12 -->
+          <article class="card">
+            <header class="card-head">
+              <p class="price">€475.00</p>
+              <h3 class="name">Saartje Baartje</h3>
+              <p class="meta">Lokeren, Belgium</p>
+            </header>
+            <p class="desc">Does not like Peter</p>
+            <ul class="metrics" aria-label="Dataset sizes">
+              <li><span class="metric">440 GB</span></li>
+              <li><span class="metric">150 GB</span></li>
+              <li><span class="metric">580 GB</span></li>
+            </ul>
+            <p class="actions"><a href="#" class="btn btn-ghost">For Sale Dataset</a></p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Properties ===== -->
+    <section class="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title">Featured Properties</h2>
+        <p class="lead">Explore our handpicked selection of the best data</p>
+        <p class="actions">
+          <a href="#" class="btn btn-primary">Discover more</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Info / About ===== -->
+    <section id="info" class="info" aria-labelledby="info-title">
+      <div class="container">
+        <h2 id="info-title">A critical exploration of data as property in the digital age</h2>
+        <p class="actions"><a href="#" class="btn btn-ghost">Learn More</a></p>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <nav class="footer-links" aria-label="Footer">
+          <ul class="nav-list">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">
+          © 2025 Immfo. A conceptual campaign about data exploitation
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ===== Cookie Consent Overlay (Satire Modal) ===== -->
+  <div class="cookie-overlay" role="dialog" aria-modal="true" aria-labelledby="cookie-title" hidden>
+    <div class="cookie-dialog">
+      <h2 id="cookie-title">We Value Your Privacy</h2>
+      <p>Please do not review our data collection practices</p>
+
+      <p><strong>We and our 271 partners</strong></p>
+      <p>
+        use cookies, pixels, beacons, device fingerprinting, local storage, and other tracking technologies to collect,
+        store, process, share, sell, and exploit your personal information, browsing behavior, location data, biometric
+        identifiers, and any other data points we can extract from your digital existence.
+      </p>
+      <p>
+        By clicking "Accept All," you consent to the processing of your data for the purposes of personalized advertising,
+        behavioral profiling, predictive analytics, cross-site tracking, data brokerage, third-party data sharing,
+        aggregated data sales, marketing automation, retargeting campaigns, lookalike audience creation, sentiment
+        analysis, psychographic profiling, and any future purposes we haven't invented yet.
+      </p>
+      <p><a href="#" class="cookie-link">Read full disclosure (you really should)</a></p>
+      <p><a href="#" class="cookie-link">Our 271 Data Partners</a></p>
+
+      <div class="cookie-actions">
+        <button class="btn btn-primary">Accept All &amp; be our Bitch</button>
+        <button class="btn btn-ghost">Reject All (Site Won't Work)</button>
+        <button class="btn btn-ghost">Save My Pointless Preferences</button>
+      </div>
+
+      <p class="cookie-foot">
+        By closing this notice, you agree to all terms anyway. There is no escape.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Skip links / anchors ===== -->
+  <a class="skip-to-content visually-hidden" href="#main-content">Skip to content</a>
+
 </body>
 </html>
