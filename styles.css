@@ -25,6 +25,11 @@ p {
   font-size: 12px;
 }
 
+.bold 
+{
+  font-weight: bold;
+}
+
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -36,9 +41,19 @@ p {
   padding: 25px;
   width: 400px;
   border-radius: 16px;
-  margin: 0 auto;
   text-align: center;
 
+  /* shadow */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
+              inset 0 0 5px rgba(0, 0, 0, 0.1);
+
+  /* fixed and centered */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);   /* Center initially */
+  transition: transform 250ms ease;
+  will-change: transform;
 }
 
 button {
