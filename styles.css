@@ -43,15 +43,15 @@ p {
   border-radius: 16px;
   text-align: center;
 
-  /* shadow */
+
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
               inset 0 0 5px rgba(0, 0, 0, 0.1);
 
-  /* fixed and centered */
+
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);   /* Center initially */
+  transform: translate(-50%, -50%);  
   transition: transform 250ms ease;
   will-change: transform;
 }
@@ -67,14 +67,16 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+/* button:hover {
 color: #1e3a8a;
 background-color: white;
 border: 2px solid #1e3a8a;
-}
+} */
 
 @media (max-width:600px) {
   .box {
     width: 240px;
   }
+
+  
 }
